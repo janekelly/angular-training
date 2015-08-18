@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SVG bokeh</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			min-height: 100vh; 
+  			background-color: #003;
+  			background-size: cover;
+		}
+		.bokeh-form {
+			padding: 10px;
+			background: #eeeeee;
+			border-radius: 5px;
+			position: fixed;
+			bottom: 30px;
+			left: 30px;
+		}
+		label {
+			font-size: 0.8em;
+			font-weight: bold;
+			color: #222222;
+		}
+	</style>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="SvgController">
+
+		<form action="" class="bokeh-form">
+			<strong>Bokeh Settings</strong>
+			<hr>
+			<label for="id_hue">Base Hue</label>
+			<input type="range" ng-model="hue" min="0" max="360" id="id_hue"><br>
+			<label for="id_minsat">Min Saturation</label>
+			<input type="range" ng-model="minsat" min="0" max="50" id="id_minsat"><br>
+			<label for="id_maxsat">Max Saturation</label>
+			<input type="range" ng-model="maxsat" min="50" max="100" id="id_maxsat"><br>
+			<hr>
+			<label for="id_minrad">Min Radius</label> 
+			<input type="range" ng-model="minrad" min="1" max="10" id="id_minrad"><br>
+			<label for="id_maxrad">Max Radius</label>
+			<input type="range" ng-model="maxrad" min="10" max="20" id="id_maxrad"><br>
+			<hr>
+			<label for="id_mincircs">No of Circles (Min)</label>
+			<input type="range" ng-model="mincircs" min="1" max="10" id="id_mincircs"><br>
+			<label for="id_maxcircs">No of Circles (Max)</label>
+			<input type="range" ng-model="maxcircs" min="10" max="100" id="id_maxcircs"><br>
+			<hr>
+			<label for="id_minopacity">Min Opacity</label>
+			<input type="range" ng-model="minopacity" min="0.1" step="0.05" max="0.5" id="id_minopacity"><br>
+			<label for="id_maxopacity">Max Opacity</label>
+			<input type="range" ng-model="maxopacity" min="0.5" step="0.05" max="1" id="id_maxopacity"><br>
+			<hr>
+			<label for="id_minlum">Min Luminosity</label>
+			<input type="range" ng-model="minlum" min="0" max="50" id="id_minlum"><br>
+			<label for="id_maxlum">Max Luminosity</label>
+			<input type="range" ng-model="maxlum" min="50" max="100" id="id_maxlum"><br>
+			<hr>
+			<label for="id_minblur">Min Blur</label>
+			<input type="range" ng-model="minblur" min="0" step="0.05" max="2.5" id="id_minblur"><br>
+			<label for="id_maxblur">Max Blur</label>
+			<input type="range" ng-model="maxblur" min="2.5" step="0.05" max="5" id="id_maxblur"><br>
+			<label for="id_blurvariants">Blur Variation</label>
+			<input type="range" ng-model="blurvariants" min="1" max="10" id="id_blurvariants"><br>
+		</form>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
