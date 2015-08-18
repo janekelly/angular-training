@@ -50,7 +50,6 @@ myApp.controller('SvgController', ['$scope',
 		}
 
 		var createSvg = function () {
-			console.log($scope.hue);
 			svg = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">';
 
 			svg += '<defs>';
@@ -76,7 +75,6 @@ myApp.controller('SvgController', ['$scope',
 		}
 
 		var appendSvg = function (svg) {
-			console.log(svg)
 			encodedData = window.btoa(svg);
 			url = "data:image/svg+xml;base64," + encodedData;
 			document.body.style.backgroundImage = "url(" + url + ")";
